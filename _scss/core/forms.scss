@@ -1,0 +1,150 @@
+// ==============================================
+//				Forms
+// ==============================================
+
+label{
+	font-size: $label-font-size;
+	font-weight: $label-font-weight;
+	font-family: $label-font-family;
+	color: $label-font-color;
+	display: inline-block;
+	margin-right: .5em;
+	margin-bottom: 0;
+}
+
+input,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="phone"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="color"],
+input[type="time"],
+input[type="search"],
+input[type="datetime-local"],
+textarea,
+select{
+	font-family: $input-font-family;
+	font-size: $input-font-size;
+	font-weight: $input-font-weight;
+	color: $input-font-color;
+	background: $white;
+	border-radius: $input-border-radius;
+	border: 1px solid $input-border-color;
+	box-shadow: none;
+	outline: none;
+	height: 2.2em;
+	width: 100%;
+	padding-left: 10px;
+	margin-bottom: 20px;
+}
+
+input:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="phone"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="datetime"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="color"]:focus,
+input[type="time"]:focus,
+input[type="search"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus {
+	border-color: $input-focus-border-color;
+	box-shadow: $input-box-shadow;
+	background-color: $input-focus-background;
+}
+
+textarea{
+	min-height: 100px;
+	padding-top: 10px;
+}
+
+select{
+	background-color:$select-background-color;
+	background-image: url('../img/select-arrow.png');
+	background-size: 2%;
+	background-repeat: no-repeat;
+	background-position: 97% center;
+	-moz-appearance:none;
+	text-overflow: '';
+	text-indent: 0.01px;
+}
+
+select:focus{
+	background-color: #FAFAFA;
+	border-color: $input-focus-border-color;
+	outline: 0;
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+	top: -1px;
+	display: inline;
+	width: auto;
+	height: auto;
+	border:0;
+	cursor: pointer;
+}
+label[for]{
+	cursor:pointer;
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus{
+	outline:1px none transparent;
+}
+
+input[type="range"] {
+	position: relative;
+	top: 3px;
+}
+
+select[multiple="multiple"],
+textarea {
+	line-height: 1.35em;
+}
+
+fieldset {
+	padding: 2em;
+	margin-bottom: 2em;
+	border: 1px solid $border-color;
+}
+legend {
+	font-weight: bold;
+	padding: 0 1em;
+	margin-left: -1em;
+}
+
+
+.req, .required {
+	font-weight: normal;
+	color: #d70a16;
+}
+
+span.forms-desc{
+	font-size: .8em;
+	font-weight: normal; 
+}
+
+.phoneNumber input {
+	display: inline-block;
+	width: auto;
+	min-width: 55px;
+	margin:auto 5px;
+	padding: auto 5px;
+}
+
+
+

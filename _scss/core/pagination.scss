@@ -1,0 +1,69 @@
+// ==============================================
+//				Pagination
+// ==============================================
+.pagination {
+    @include clearfix();
+    position: relative;
+    display: inline-block;
+}
+
+.pagination ul {
+    border: 1px solid $border-color;
+    border-radius: $pagination-border-radius;
+    background-color: $pagination-background-color;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.pagination ul li:first-child {
+    border-radius: $pagination-border-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.pagination ul li:last-child {
+    border-radius: $pagination-border-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.pagination li {
+    border-right: 1px solid $pagination-border-color;
+    float: left;
+    list-style: none;
+}
+
+.pagination li a {
+    padding: $pagination-padding;
+    color: $pagination-font-color;
+    display: block;
+    text-decoration: none;
+    line-height: initial;
+}
+
+.pagination li:last-child {
+    border: 0;
+}
+
+.pagination li.active a {
+    color: $global-font-color;
+    background-color:#eee;
+}
+
+.pagination li.active a:hover {
+	color: $global-font-color;
+	cursor: default;
+}
+
+@media only screen and (min-width: $large-up) {
+    .pagination li:focus,
+    .pagination li:hover {
+        background-color: $primary-color;
+        text-decoration: none;
+        box-shadow: none;
+    }
+    .pagination li a:hover {
+        color: $pagination-font-hover-color;
+    }
+}

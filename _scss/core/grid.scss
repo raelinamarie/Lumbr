@@ -1,0 +1,180 @@
+// ==============================================
+//				Grid
+// ==============================================
+.column,
+.columns {
+    padding-left: $column-gutter / 2;
+    padding-right: $column-gutter / 2;
+    width: 100%;
+    float: left;
+}
+.columns .columns,
+.column .column,
+.column .columns,
+.columns .column {
+    padding-left: 0;
+    padding-right: 0;
+}
+.row {
+    max-width: $row-width;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: $small-row-width;
+}
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+.row .row {
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+}
+
+@media only screen and (min-width: $medium-up) {
+    .row {
+        max-width: $medium-row-width;
+    }
+    .columns .columns,
+    .column .column {
+        padding-left: 0;
+        padding-right: $column-gutter / 2;
+    }
+}
+
+@media only screen and (min-width: $large-up) {
+    .row {
+        max-width: $large-row-width;
+    }
+    .columns .columns,
+    .column .column {
+        padding-left: 0;
+        padding-right: $column-gutter / 2;
+    }
+}
+
+$bp-grid-small: 'only screen';
+@function _col-width($n, $t-col) {
+    @return ($n/$t-col*100%);
+}
+
+@mixin gen-cols($total-columns, $name) {
+    @for $i from 1 through $total-columns {
+        .#{$name}-#{$i} {
+            width: _col-width($i, $total-columns);
+        }
+    }
+}
+
+@mixin gen-col-offsets($total-columns, $name, $prefix) {
+    @for $i from 1 through $total-columns {
+        .#{$name}-#{$prefix}-#{$i} {
+            @if $prefix==offset {
+                margin-left: _col-width($i, $total-columns);
+            }
+            @else if $prefix==pull {
+                position: relative;
+                right: _col-width($i, $total-columns);
+                left: auto;
+            }
+            @else if $prefix==push {
+                position: relative;
+                right: auto;
+                left: _col-width($i, $total-columns);
+            }
+        }
+    }
+}
+
+.small-centered{
+    margin-left: auto;
+    margin-right: auto;
+    float: none; 
+}
+
+.small-centered:first-child,
+.small-centered:last-child{
+    float: none;
+}
+
+.small-uncentered{
+    margin-left: 0;
+    margin-right: 0;
+    float: left; 
+}
+.small-uncentered:last-child,
+.small-uncentered:last-child{
+    float: left;
+}
+
+@include gen-cols(12, small);
+@include gen-col-offsets(12, small, push);
+@include gen-col-offsets(12, small, pull);
+@include gen-col-offsets(12, small, offset);
+
+@media only screen and (min-width: $medium-up) {
+    @include gen-cols(12, medium);
+    @include gen-col-offsets(12, medium, push);
+    @include gen-col-offsets(12, medium, pull);
+    @include gen-col-offsets(12, medium, offset);
+
+    .medium-centered{
+        margin-left: auto;
+        margin-right: auto;
+        float: none; 
+    }
+
+    .medium-centered:first-child,
+    .medium-centered:last-child{
+        float: none;
+    }
+
+    .medium-uncentered{
+        margin-left: 0;
+        margin-right: 0;
+        float: left; 
+    }
+    .medium-uncentered:last-child,
+    .medium-uncentered:last-child{
+        float: left;
+    }
+
+}
+
+@media only screen and (min-width: $large-up) {
+    @include gen-cols(12, large);
+    @include gen-col-offsets(12, large, push);
+    @include gen-col-offsets(12, large, pull);
+    @include gen-col-offsets(12, large, offset);
+
+    .large-centered{
+    margin-left: auto;
+    margin-right: auto;
+    float: none; 
+    }
+
+    .large-centered:first-child,
+    .large-centered:last-child{
+        float: none;
+    }
+
+    .large-uncentered{
+        margin-left: 0;
+        margin-right: 0;
+        float: left; 
+    }
+    .large-uncentered:last-child,
+    .large-uncentered:last-child{
+        float: left;
+    }
+}
+
+

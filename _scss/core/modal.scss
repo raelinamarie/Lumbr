@@ -1,0 +1,81 @@
+// ==============================================
+//				 Modal
+// ==============================================
+.modal {
+    position: fixed;
+    z-index: -999;
+}
+
+.modal .modal-overlay {
+    transition: $global-transition;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 100%;
+    background: $modal-overlay-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal .modal-content {
+    transition: $global-transition;
+    background-color: $modal-background-color;
+    border-radius: $modal-radius;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: $modal-width-small;
+    max-height: 90%;
+    overflow-y: auto;
+    background: #fff;
+    padding: 30px;
+}
+
+.modal .modal-content:after{
+	content:"x";
+	position: absolute;
+	top:5px;
+	right:10px;
+	cursor:pointer;
+}
+
+@media only screen and (min-width: $medium-up) {
+    .modal .modal-content {
+        max-width: $modal-width-medium;
+    }
+}
+
+@media only screen and (min-width: $large-up) {
+    .modal .modal-content {
+        max-width: $modal-width-large;
+    }
+}
+
+.top {
+    transform: translateY(-150%);
+}
+
+.left {
+    transform: translateX(-150%);
+}
+
+.right {
+    transform: translateX(150%);
+}
+
+.bottom {
+    transform: translateY(350%);
+}
+
+.modal-active .modal .modal-overlay {
+    opacity: 1;
+    filter: none;
+}
+
+.modal-active .modal .modal-content {
+    transform: translate3d(0, 0, 0);
+}

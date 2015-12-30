@@ -1,0 +1,25 @@
+// Footer Settings
+
+$footer-bg-color:$primary-dark;
+$footer-link-color:;
+
+.frank{
+	@include clearfix();
+	background-color:$footer-bg-color;
+	h3{
+		margin-top:1em;
+	}
+	a{
+		display: block;
+	}
+	.copyright{
+		@include clearfix();
+		background-color:darken($footer-bg-color, 20%);
+		padding-top: 1em;
+		padding-bottom: 1em;
+		margin-top: 1em;
+		float: left;
+		width:100%;
+		text-align: center;
+	}
+}

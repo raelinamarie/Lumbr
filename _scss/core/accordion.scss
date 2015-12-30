@@ -1,0 +1,46 @@
+// ==============================================
+//        Accordion
+// ==============================================
+.accordion {
+    border: 1px solid $accordion-border-color;
+    border-radius: $accordion-border-radius;
+    margin-top: 1em;
+    position: relative;
+}
+
+.accordion-title {
+    color: $accordion-title-color;
+    font-size: $accordion-title-font-size;
+    padding: $accordion-padding;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.accordion-title:before {
+    content: "+";
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 30px;
+    display: inline-block;
+    color: $accordion-title-color;
+}
+
+
+.accordion-content {
+    display: none;
+    padding: $accordion-padding;
+    border-top: 1px solid $accordion-border-color;
+}
+
+
+
+.accordion.open span:before {
+    content: "-";
+    color: $accordion-active-color;
+
+}
+
+.accordion.open span {
+	color:$accordion-active-color;
+}

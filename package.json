@@ -1,0 +1,42 @@
+{
+  "name": "Lumbr",
+  "version": "0.1.0",
+  "description": "A Front-End Pattern Library & Design Ecosystem",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seth Coelen",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^1.3.7",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-gh-pages": "^0.5.3",
+    "gulp-htmlmin": "^1.1.4",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.2",
+    "gulp-uncss": "^1.0.4",
+    "gulp-util": "^3.0.7",
+    "run-sequence": "^1.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumbr/lumbr"
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "browsersync",
+    "framework"
+  ],
+  "bugs": {
+    "url": "https://github.com/lumbr/lumbr/issues"
+  },
+  "homepage": "https://lumbr.org"
+}

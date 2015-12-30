@@ -1,0 +1,310 @@
+// ==============================================
+//		Table of contents
+// ==============================================
+// - Theme colors
+// - global options
+// - Grid
+// - Typography
+// - Forms
+// - Buttons
+// - Navigation
+// - Modal
+// - Breadcrumbs
+// - Pagination
+// - Accordion
+// - Tables
+// - Tabs
+
+// ----------------------------------------
+//		Colors
+// ----------------------------------------
+
+// Theme Colors
+$primary-color: #9013FE;
+$primary-dark: darken($primary-color, 10%);
+$primary-light: lighten($primary-color, 10%);
+$secondary-color: #FEAD2C;
+$border-color:#cccccc;
+
+$light-gray:#F5F5F5;
+$dark-gray:#cccccc;
+
+// mono
+$white: #FEFEFE;
+$black: #333333;
+
+// ----------------------------------------
+//		Global 
+// ----------------------------------------
+
+$body-bg: #ffffff; 
+   
+$global-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+$global-font-color: #333333;
+$link-color: $primary-color; 
+
+$global-line-height: 1.4;
+$base-font-size: 1em; 
+
+$global-font-weight: normal;
+$global-font-style: normal;
+
+$global-radius: 3px; // the roundness of all things (buttons, inputs, panels, boxes)
+
+$global-transition: all ease 300ms; // for use with the @include transition(); mixin
+$global-blur: 5px; // for use with the .blur(); mixin
+
+
+
+// ----------------------------------------
+//		Grid 
+// ----------------------------------------
+
+// Columns
+$row-width: 75em;
+$total-columns: 12;
+$column-gutter: 2em;
+
+// Media Queries
+$large-up: 62.5em;
+$medium-up: 48em;
+$small-up: 30em;
+
+// Breakpoints
+$large-row-width: $row-width;
+$medium-row-width: $medium-up;
+$small-row-width: $small-up;
+
+
+// ---------------------------------------------------------
+//		Typography 
+// ---------------------------------------------------------
+
+// headings
+$heading-font-family: $global-font-family;
+$heading-font-weight: $global-font-weight;
+$heading-font-style: $global-font-style;
+$heading-line-height: $global-line-height;
+$heading-font-color: $global-font-color;
+$heading-margin: 0 0 .5em;
+
+$h1-font-size:2.5em;
+$h2-font-size:2.1em;
+$h3-font-size:1.7em;
+$h4-font-size:1.4em;
+$h5-font-size:1.1em;
+$h6-font-size:1em;
+
+// Paragraph
+$paragraph-font-color: $global-font-color;
+$paragraph-font-size: $base-font-size;
+$paragraph-font-weight: 300;
+$paragraph-line-height: 2em;
+$paragraph-margin:0 0 .5em;
+
+// code
+$code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// ---------------------------------------------------------
+//     Form 
+// ---------------------------------------------------------
+
+// Labels
+$label-font-size: $base-font-size;
+$label-font-weight: light;
+$label-font-family: $global-font-family;
+$label-font-color: $global-font-color;
+$form-description-color: $global-font-color;
+
+// Placeholder text
+$placeholder-color:darken($border-color, 25%);
+$placeholder-font-size:$base-font-size;
+
+
+// Inputs
+$input-font-family: $global-font-family;
+$input-font-size: $base-font-size;
+$input-font-weight: 100;
+$input-font-color: $global-font-color;
+
+$input-border-color: #ccc;
+$input-border-width: 1px;
+$input-border-radius: $global-radius;
+
+$input-focus-border-color: $secondary-color;
+$input-focus-background: #fbfbfb;
+
+$input-box-shadow: 0 0 3px rgba(70,161,231,0.3);
+
+// Selects
+$select-background-color: #FAFAFA;
+
+// ---------------------------------------------------------
+//      Buttons
+// ---------------------------------------------------------
+
+// color
+$button-background:$primary-color;
+$button-color:$white;
+$button-border:$primary-color;
+
+// font
+$button-font-family:$global-font-family;
+$button-font-size:$base-font-size;
+$button-font-weight:300;
+
+// button shape
+$button-radius:$global-radius;
+$button-padding:0.625em 2em;
+
+
+// ---------------------------------------------------------
+//      Navigations 
+// ---------------------------------------------------------
+
+// color
+$nav-link-color:$global-font-color;
+$nav-background-color:$primary-color;
+$nav-background-hover:darken($primary-color, 10%);
+
+// font
+$nav-font-family:$global-font-family;
+$nav-font-size:$base-font-size;
+$nav-font-weight:normal;
+
+// border
+$nav-border-radius:$global-radius;
+
+// space
+$nav-padding: 1em 1em;
+
+
+// ---------------------------------------------------------
+//     Modal 
+// ---------------------------------------------------------
+
+// color
+$modal-background-color: #ffffff;
+$modal-overlay-color:rgba(0, 0, 0, 0.4);
+
+// border
+$modal-radius: $global-radius;
+
+// space
+$modal-padding: 1.5em;
+
+// sizes
+$modal-width-small: 90%;
+$modal-width-medium: 75%;
+$modal-width-large: 50%;
+
+// ---------------------------------------------------------
+//      Breadcrumbs 
+// ---------------------------------------------------------
+
+// color
+$breadcrumb-background-color:lighten($border-color, 18%);
+$breadcrumb-link-color:$primary-color;
+$breadcrumb-link-hover-color:$primary-light;
+$breadcrumb-span-color:$global-font-color;
+
+// font
+$breadcrumb-font-size:$base-font-size;
+$breadcrumb-font-weight:300;
+
+// border
+$breadcrumb-border-radius:$global-radius;
+$breadcrumb-border-color:darken($border-color, 0%);
+
+// space
+$breadcrumb-padding:.3em 1em;
+$breadcrumb-margin:1em 0;
+
+// misc
+$breadcrumb-seperator:" / ";
+
+// ---------------------------------------------------------
+//     Pagination 
+// ---------------------------------------------------------
+
+// color
+$pagination-background-color: transparent;
+$pagination-background-hover-color: $primary-color;
+
+// font
+$pagination-font-color: $primary-color;
+$pagination-font-hover-color: $white;
+
+// border
+$pagination-border-radius: $global-radius;
+$pagination-border-color: $border-color;
+
+// space
+$pagination-padding: .35em .8em .45em;
+
+// ---------------------------------------------------------
+//     Accordion
+// ---------------------------------------------------------
+
+// color
+$accordion-title-color: $global-font-color;
+$accordion-active-color: $primary-color;
+
+// font
+$accordion-title-font-size: $base-font-size;
+
+// border
+$accordion-border-color: $border-color;
+$accordion-border-radius: $global-radius;
+
+// space
+$accordion-padding: .5em 1em;
+
+// ---------------------------------------------------------
+//     Tables
+// ---------------------------------------------------------
+
+// color
+$table-border-color:$border-color;
+$table-striped-color:lighten($table-border-color, 5%);
+$table-caption-color:$global-font-color;
+
+// font
+$table-heading-font-size:$paragraph-font-size;
+$table-heading-font-weight:bold;
+$table-content-font-size:$paragraph-font-size - .2em;
+
+// border
+$table-border-radius:$global-radius;
+
+// space
+$table-cell-padding:.75em .5em;
+
+
+// ---------------------------------------------------------
+//     Tabs
+// ---------------------------------------------------------
+
+// color
+$tab-default-color:$white;
+$tab-active-color:$primary-color;
+
+// font
+$tab-font-size:$base-font-size;
+$tab-default-font-color:$global-font-color;
+// border
+$tab-border-color:#ccc;
+
+// space
+$tab-padding-large:0px 30px;
+$tab-padding-small:5px 20px;
+$tab-height:40px;
+
+
+
+
+
+
+
+
+

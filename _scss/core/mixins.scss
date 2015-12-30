@@ -1,0 +1,77 @@
+// ==============================================
+//				Mixins
+// ==============================================
+
+@mixin clearfix(){
+	clear:both;
+	&:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin opacity($opacity:.5) {
+	$freaking-ie: $opacity * 50;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{freaking-ie})";
+	filter: alpha(opacity=$freaking-ie);
+	opacity: $opacity;
+}
+
+// @mixin background-opacity($color, $opacity) {
+//     $rgba-color: rgba(red($color), green($color), blue($color), $opacity);
+//     background-color: $rgba-color;
+
+//     // Hack for IE8:
+//     background: none\9; // Only IE8
+//     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d')", argb(@rgba-color),argb(@rgba-color))); // IE9 and down
+//     // Problem: Filter gets applied twice in IE9.
+//     // Solution:
+//     &:not([dummy]) {
+//       filter: progid:DXImageTransform.Microsoft.gradient(enabled='false'); // Only IE9
+//     }
+// }
+
+@mixin rgba($color, $opacity: 1) {
+  background: rgba( red($color), green($color), blue($color), $opacity);
+}
+
+// @mixin gradient($start: $primary-color, $end: $secondary-color, $deg:0deg) {
+// 	background-color: $primary-color; // fallback color if gradient isn't rendered
+// 	background-image: linear-gradient($deg, $start, $end); // The standard
+// 	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@start,@end));
+// 	 // IE9 and up
+// }
+
+
+
+@mixin transition($transition: $global-transition) {
+	transition: $transition;
+}
+
+@mixin blur($blur-variable: $global-blur) {
+	filter: blur($global-blur);
+}
+
+@mixin close($r: 0, $g: 0, $b: 0) {
+	padding: 4px 6px;
+	line-height: 1;
+	font-size: 18px;
+	cursor: pointer;
+	color: rgba($r, $g, $b, 1);
+	text-decoration: none;
+
+	
+	&:before {
+		font-family: FontAwesome;
+		content: '\f00d';
+		font-style: normal;
+	}
+
+	&:hover {
+		// .opacity(100);
+	}
+} 
+   
+
+

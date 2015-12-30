@@ -1,0 +1,182 @@
+// ==============================================
+//				Typography
+// ==============================================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-style: $heading-font-style;
+    line-height: $heading-line-height;
+    margin: $heading-margin;
+    color: $heading-font-color;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: $h1-font-size *.8;
+}
+
+h2 {
+    font-size: $h2-font-size *.8;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: $h3-font-size *.8;
+}
+
+h4 {
+    font-size: $h4-font-size *.8;
+    font-style: italic;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    font-weight: 900;
+}
+
+h6 {
+    font-size: $h6-font-size;
+    text-transform: uppercase;
+}
+
+p {
+    color: $global-font-color;
+    line-height: $paragraph-line-height;
+    font-weight: $paragraph-font-weight;
+    font-size: $paragraph-font-size;
+    margin: $paragraph-margin;
+}
+
+a {
+    color: $link-color;
+}
+
+
+
+@media only screen and (min-width: $medium-up) {
+    h1 {
+        font-size: $h1-font-size *.9;
+    }
+    h2 {
+        font-size: $h2-font-size *.9;
+    }
+    h3 {
+        font-size: $h3-font-size *.9;
+    }
+    h4 {
+        font-size: $h4-font-size *.9;
+    }
+    h5 {
+        font-size: $h5-font-size;
+    }
+    h6 {
+        font-size: $h6-font-size;
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (min-width: $large-up) {
+    h1 {
+        font-size: $h1-font-size;
+    }
+    h2 {
+        font-size: $h2-font-size;
+    }
+    h3 {
+        font-size: $h3-font-size;
+    }
+    h4 {
+        font-size: $h4-font-size;
+    }
+    h5 {
+        font-size: $h5-font-size;
+    }
+    h6 {
+        font-size: $h6-font-size;
+        text-transform: uppercase;
+    }
+    
+    a:focus,
+    a:hover {
+        color: lighten($link-color, 20%);
+    }
+}
+
+ul {
+    margin-bottom: 1em;
+}
+
+address {
+    font-style: normal;
+}
+
+blockquote {
+    font-size: $base-font-size;
+    font-style: italic;
+    padding: 0 0 0 1em;
+    margin: 1em 0 1em 1em;
+    border-left: 2px solid $border-color;
+}
+
+blockquote p:before,
+blockquote p:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+blockquote p {
+    margin-bottom: .5em;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+
+small {
+    font-size: $base-font-size - .3em;
+    line-height: 1;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+sub,
+sup {
+    font-size: $base-font-size - .3em;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}

@@ -1,0 +1,9 @@
+// Write your custom, site specific styles here
+
+body{
+	background:$body-bg;
+	font-family:$global-font-family;
+	color:$global-font-color;
+	font-size:$base-font-size;
+	line-height:$global-line-height;
+}

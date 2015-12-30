@@ -1,0 +1,10 @@
+name: fun time
+markdown: redcarpet
+highlighter: pygments # or rouge or null
+timezone: America/New_York
+
+copyright: © copyright 2015 - YourSiteName.com
+
+
+exclude: ["node_modules", "gulpfile.js", "package.json"]
+

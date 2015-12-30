@@ -1,0 +1,45 @@
+// ==============================================
+//				Breadcrumbs
+// ==============================================
+
+
+.breadcrumbs {
+	@include clearfix();
+	background-color: $breadcrumb-background-color;
+	border: 1px solid $breadcrumb-border-color;
+	border-radius: $breadcrumb-border-radius;
+	padding: $breadcrumb-padding;
+	margin: $breadcrumb-margin;
+} 
+
+.breadcrumbs a, .breadcrumbs span{
+	font-size: $breadcrumb-font-size;
+	font-weight: $breadcrumb-font-weight;
+	text-decoration: none;
+}
+
+.breadcrumbs a{
+	color:$breadcrumb-link-color;
+}
+
+.breadcrumbs span{
+	color:$breadcrumb-span-color;
+}
+
+.breadcrumbs a:after{
+	content: $breadcrumb-seperator;
+	margin: 0 .5rem;
+}
+
+
+@media only screen and (min-width: $large-up) {
+
+	.breadcrumbs a:hover{
+		color: $breadcrumb-link-hover-color;
+	}
+
+	.breadcrumbs a:hover:after{
+		color: $breadcrumb-link-color;
+		cursor: text;
+	}
+}

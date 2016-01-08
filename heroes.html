@@ -1,0 +1,42 @@
+---
+layout: default
+title: Lumbr
+---
+<div class="row">
+
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{post.excerpt}}
+    </li>
+  {% endfor %}
+</ul>
+
+{% for post in site.posts %}
+  {% if post.categories contains 'goose' %}
+    <div class="item">
+      <h3>{{ post.title }}</h3>
+      <p>{{post.excerpt}}</p>  
+    </div>
+  {% endif %}
+{% endfor %}
+
+
+{% for post in site.posts.footers %}
+  {% if post.categories contains 'fun' %}
+    <div class="item">
+      <h3>{{ post.title }}</h3>
+      <p>{{post.excerpt}}</p>  
+    </div>
+  {% endif %}
+{% endfor %}
+
+
+
+
+
+
+</div>
+

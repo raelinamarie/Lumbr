@@ -1,16 +1,23 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2014-04-21 09:11:03
-categories: jekyll update
+title:  "This is the first post"
+date:   2014-04-20 09:11:03
+excerpt_separator: <!--more-->
+permalink: /:categories/:title.html
+published: true
+category: headers
 ---
 
+
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
+
+<!--more-->
+
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 def print_hi(name)
   puts "Hi, #{name}"
 end

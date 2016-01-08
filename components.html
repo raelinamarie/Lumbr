@@ -1,0 +1,31 @@
+---
+layout: default
+title: Components
+---
+<div class="row">
+<h1>components</h1>
+
+<div class="large-9 columns">
+<div class="blogEntry">
+  <h2>Pull all blog posts</h2>
+
+    {% for post in site.posts %}
+    
+    <a class="blogEntry-title" href="{{ post.url }}">{{ post.title }}</a>
+    
+    <div class="blogEntry-excerpt">{{post.excerpt}}</div>   
+
+    {% endfor %}
+</div>
+</div>
+<div class="blogCategories">
+<div class="large-3 columns">
+	<a href="#" class="btn-cat">Core {{ site.categories.core | size }}</a>
+	<a href="#" class="btn-cat">Heroes {{ site.categories.heroes | size }}</a>
+	<a href="#" class="btn-cat">Navigation {{ site.categories.navigation | size }}</a> 
+	<a href="#" class="btn-cat">Callouts {{ site.categories.callouts | size }}</a>
+	<a href="#" class="btn-cat">Footers {{ site.categories.footers | size }}</a>
+</div>
+</div>
+
+</div>

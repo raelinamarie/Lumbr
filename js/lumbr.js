@@ -81,6 +81,63 @@ $(document).ready(function() {
     $('ul.tabs li').last().addClass("tab_last");
 
 
+// Off Canvas
+// Show the off-canvas navigation
+
+var hamburger = $('#hamburger-icon')
+
+hamburger.click(function(){
+    hamburger.toggleClass('active');
+    return false;
+    });
+
+hamburger.click(function() {
+    $('#offCanvas').toggleClass('offCanvas-show');
+});
+
+// Hide the off-canvas nav when clicking a link
+$('#offCanvas').find('a').on('click', function(e) {
+    $('#offCanvas').removeClass('offCanvas-show');
+});
+
+// Multi Level
+$('body').addClass('js');
+          var $menu = $('#menu'),
+              $menulink = $('.menu-link'),
+              $menuTrigger = $('.has-subnav > a');
+
+        $menulink.click(function(e) {
+            e.preventDefault();
+            $menulink.toggleClass('active');
+            $menu.toggleClass('active');
+        });
+
+        $menuTrigger.click(function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            $this.toggleClass('active').next('ul').toggleClass('active');
+        });
+
+
+    //thumbNav menu
+    $('.thumbNav i').on('click', function(){
+        var $nav = $(this).closest('.thumbNav'),
+            width = $(window).width(0),
+            height = $nav.find('ul').height();
+
+        $nav.toggleClass('active')
+            .css({
+                'width': width,
+                'height': height
+            });
+
+        if(!$nav.hasClass('active'))
+            $($nav).removeAttr('style');
+
+        $('.iconSprite').append($('.iconSprite i:first-child'));
+    });
+
+
 // Modal
     var modalTrigger = $(".modal-trigger");
     var modalOverlay = $('.modal-overlay');

@@ -44,6 +44,10 @@ h6 {
     text-transform: uppercase;
 }
 
+p.intro{
+    font-size:$paragraph-font-size *1.2;
+}
+
 p {
     color: $global-font-color;
     line-height: $paragraph-line-height;

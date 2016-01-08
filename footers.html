@@ -1,14 +1,13 @@
 ---
 layout: default
-title: Lumbr
+title: Footers LP
 ---
-<div class="row">
-<h1>Footers</h1>
 
-
-{% include footers/frank.html %}
-
-
-
-</div>
-
+{% for post in site.posts %}
+  {% if post.categories contains 'footers' %}
+    <div class="item">
+      <h3>{{ post.title }}</h3>
+      <p>{{post.excerpt}}</p>  
+    </div>
+  {% endif %}
+{% endfor %}

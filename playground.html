@@ -2,29 +2,32 @@
 layout: default
 title: Lumbr
 ---
-<br>
-<br>
-<br>
-<div class="row">
 
-<button class="btn">Button</button>
-<button class="btn rounded">Button</button>
-<button class="btn pill">Button</button>
+<div class="row"> 
+  <h1>playground</h1>
+
+<div class="blogEntry">
+  <h2>Pull all blog posts</h2>
+
+    {% for post in site.posts %}
+    
+    <a class="blogEntry-title" href="{{ post.url }}">{{ post.title }}</a>
+    
+    <div class="blogEntry-excerpt">{{post.excerpt}}</div>   
+
+    {% endfor %}
+</div>
+
+<h2>pull posts from specific category</h2>
 
 
-<button class="btn secondary">Button</button>
-<button class="btn secondary rounded">Button</button>
-<button class="btn secondary pill">Button</button>
-
-<button class="btn neutral">Button</button>
-<button class="btn neutral rounded">Button</button>
-<button class="btn neutral pill">Button</button>
-
-
-<button class="btn-outline">Button</button>
-<button class="btn-outline rounded">Button</button>
-<button class="btn-outline pill">Button</button>
-
-<button>asld;fjk</button>
+{% for post in site.posts %}
+  {% if post.categories contains 'headers' %}
+    <div class="item">
+      <h3>{{ post.title }}</h3>
+      <p>{{post.excerpt}}</p>  
+    </div>
+  {% endif %}
+{% endfor %}
 
 </div>

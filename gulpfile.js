@@ -49,7 +49,11 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 // Compiles files sass to css
 gulp.task('sass', function() {
     return gulp.src('_scss/main.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            sourceComments: 'map',
+            sourceMap: 'sass',
+            outputStyle: 'nested'
+        }).on('error', sass.logError))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -61,7 +65,7 @@ gulp.task('sass', function() {
 // Watch html/md files, run jekyll & reload BrowserSync
 gulp.task('watch', function() {
     gulp.watch('_scss/**/*.scss', ['sass']);
-    gulp.watch(['*.html', '_config.yml', '_layouts/*.html', '_includes/**/*.html', '_posts/*', 'js/*.js'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_config.yml', 'components/**/*.html', '_layouts/*.html', '_includes/**/*.html', '_posts/*', 'js/*.js'], ['jekyll-rebuild']);
 });
 
 

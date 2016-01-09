@@ -1,21 +1,27 @@
 ---
 layout: post
-title:  "This is the 1st post"
-date:   2016-01-08 09:11:03
-categories: footers
+title:  "Pagination"
+date:   2016-01-09
+categories: core
 excerpt_separator: <!--more-->
 permalink: /:categories/:title.html
 ---
 
+<h1>{{page.title}}</h1>
+
+<div class="medium-6 columns">
+<img src="http://placehold.it/600x200" alt="">
+</div>
+<div class="medium-6 columns">
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, ipsum esse necessitatibus reprehenderit quia inventore ratione vel, provident deserunt, quaerat officia impedit! Saepe, provident sequi corporis doloremque illo aspernatur ipsum.</p>
+</div>
 
 <!--more-->
 
-{% include footers/frank.html %}
-
+{% include core/pagination.html %}
 
 {% highlight html %}
 
-{% include footers/frank.html %}
+{% include core/pagination.html %}
 
 {% endhighlight %}

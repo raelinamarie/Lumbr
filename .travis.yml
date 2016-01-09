@@ -1,0 +1,15 @@
+language: ruby
+cache: bundler
+sudo: false
+rvm:
+- 2.2
+- 2.1
+- 2.0
+- ruby-head
+- jruby-9.0.3.0
+sudo: false
+language: node_js
+node_js:
+  - "0.10"
+  - "0.12"
+  - "stable"

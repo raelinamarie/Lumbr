@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "This is the first post"
-date:   2014-04-20 09:11:03
+date:   2016-01-08
 excerpt_separator: <!--more-->
 permalink: /:categories/:title.html
 published: true
@@ -10,6 +10,8 @@ category: headers
 
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
+
+<img src="/assets/footer1.png">
 
 <!--more-->
 

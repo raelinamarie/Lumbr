@@ -14,24 +14,6 @@ title: Lumbr
   {% endfor %}
 </ul>
 
-{% for post in site.posts %}
-  {% if post.categories contains 'goose' %}
-    <div class="item">
-      <h3>{{ post.title }}</h3>
-      <p>{{post.excerpt}}</p>  
-    </div>
-  {% endif %}
-{% endfor %}
-
-
-{% for post in site.posts.footers %}
-  {% if post.categories contains 'fun' %}
-    <div class="item">
-      <h3>{{ post.title }}</h3>
-      <p>{{post.excerpt}}</p>  
-    </div>
-  {% endif %}
-{% endfor %}
 
 
 

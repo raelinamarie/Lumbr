@@ -23,96 +23,12 @@
     padding: .5em 1em;
 }
 
-.logoDocs {
-    background-color: $secondary-color;
-    text-align: center;
-    padding: .9rem;
-    border-radius: $global-radius;
-}
 
-.exampleSection {
-    font-weight: bold;
-    color: $secondary-color;
-    clear: both;
-}
 
-h5.sectionHeader {
-    color: $primary-color;
-    padding-top: .5em;
-    border-top: 1px solid #ddd;
-    margin-top: 1em;
-}
 
-.grid span {
-    color: $secondary-color;
-    display: block;
-    text-align: center;
-    padding: 10px 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: $border-color;
-}
 
-.doc-menu {
-    position: fixed;
-    list-style: none;
-    margin-top: 15px;
-    li {
-        a {
-            display: block;
-            text-decoration: none;
-            padding: 5px 15px;
-            font-size: 1em;
-            color: $global-font-color;
-            @include transition();
-            border-radius: $global-radius;
-            &:hover {
-                color: #ffffff;   
-                background-color: $primary-color;
-                @include transition();
-            }
-        }
-        &.active a {
-            color: $global-font-color;
-            background-color: $border-color;
-            @include transition();
-        }
-    }
-}
 
-.doc-menu-mobile {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-}
 
-.examplePage .equalHeight {
-    background-color: $border-color;
-}
-
-.examplePage body {
-    padding-top: 55px;
-}
-
-.row.startupPage {
-    padding-top: 3em;
-}
-
-.SMContainer {
-    float: left;
-    text-align: center;
-    background: $primary-color;
-    width: 100%; 
-    border-radius: 3px;
-    padding: 2em 4em;
-    margin-bottom: 1em;
-    @include transition();
-    &:hover {
-        background-color: $secondary-color;
-        @include transition();
-    }
-}
 
 @media screen and (min-width: $medium-up) {
     .examplePage body {
@@ -136,7 +52,7 @@ pre[class*="language-"] {
     text-align: left;
     white-space: pre;
     word-spacing: normal;
-    word-break: normal;
+    word-break: break-word;
     line-height: 1;
     -moz-tab-size: 4;
     -o-tab-size: 4;

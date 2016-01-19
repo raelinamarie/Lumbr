@@ -1,15 +1,15 @@
 ---
-layout: default
-title: documentation
+layout: docs-layout
+title: Documentation
 ---
 
-<div class="examplePage">
-    <div class="row">
-        <div class="large-12 columns">
+<h1>{{page.title}}</h1>
 
-<h1>documentation</h1>
+{% for post in site.posts %}
+	{% if post.categories contains 'core' %}  
+		<h1><a name="{{ post.title }}">{{ post.title }}</a></h1>
+		{{ post.content }}
+  {% endif %}
+{% endfor %}
 
 
-		</div>
-	</div>
-</div>

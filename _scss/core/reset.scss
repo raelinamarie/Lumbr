@@ -28,6 +28,10 @@
   box-sizing: inherit;
 }
 
+.clearfix{
+  @include clearfix();
+}
+
 html {
 	box-sizing: border-box;
     font-family: sans-serif;

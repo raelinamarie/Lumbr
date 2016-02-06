@@ -8,7 +8,7 @@
 	
 	{% for post in site.posts %}
 		{% if post.categories contains 'core' %}
-			<div class="item">
+			<div class="componentItem">
 				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				<p>{{ post.excerpt }}</p>  
 				<a href="{{ post.url }}" class="btn">View this component</a>
@@ -23,7 +23,7 @@
   
 	{% for post in site.posts %}
 		{% if post.categories contains 'footers' %}
-			<div class="item">
+			<div class="componentItem">
 				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				<p>{{ post.excerpt }}</p>  
 				<a href="{{ post.url }}" class="btn">View this component</a>
@@ -37,7 +37,7 @@
   
 	{% for post in site.posts %}
 		{% if post.categories contains 'heroes' %}
-			<div class="item">
+			<div class="componentItem">
 				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				<p>{{ post.excerpt }}</p>  
 				<a href="{{ post.url }}" class="btn">View this component</a>
@@ -51,7 +51,7 @@
   
 	{% for post in site.posts %}
 		{% if post.categories contains 'call to action' %}
-			<div class="item">
+			<div class="componentItem">
 				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				<p>{{ post.excerpt }}</p>  
 				<a href="{{ post.url }}" class="btn">View this component</a>
@@ -65,7 +65,7 @@
   
 	{% for post in site.posts %}
 		{% if post.categories contains 'navigation' %}
-			<div class="item">
+			<div class="componentItem">
 				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				<p>{{ post.excerpt }}</p>  
 				<a href="{{ post.url }}" class="btn">View this component</a>

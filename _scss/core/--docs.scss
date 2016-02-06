@@ -25,6 +25,10 @@
 .documentation-sidebar {
     display: none;
 }
+.full-width{
+    max-width:100% !important;
+}
+
 
 @media screen and (min-width: $medium-up) {
     .documentation-sidebar {

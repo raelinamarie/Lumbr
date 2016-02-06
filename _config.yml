@@ -1,8 +1,16 @@
 name: fun time
 markdown: redcarpet
 highlighter: pygments # or rouge or null
+
+site_title: Lumbr
+site_tagline: This is the tagline
+site_url: http://lumbr.org
+site_email: seth@coelen.co
+site_footer: © copyright 2015 - YourSiteName.com
+
+
+
 timezone: America/New_York
-copyright: © copyright 2015 - YourSiteName.com
 excerpt_separator: <!--more-->
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 

@@ -4,6 +4,7 @@ $footer-bg-color:$primary-dark;
 $footer-link-color:;
 
 .frank{
+
 	@include clearfix();
 	background-color:$footer-bg-color;
 	h3{

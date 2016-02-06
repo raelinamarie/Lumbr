@@ -31,16 +31,17 @@
     display: none;
     padding: $accordion-padding;
     border-top: 1px solid $accordion-border-color;
+    @include clearfix();
 }
 
 
 
-.accordion.open span:before {
+.accordion.open .accordion-title:before {
     content: "-";
     color: $accordion-active-color;
 
 }
 
-.accordion.open span {
+.accordion.open .accordion-title {
 	color:$accordion-active-color;
 }

@@ -20,31 +20,25 @@
 // ----------------------------------------
 
 
-//**** TODO: align/name colors from sketch
-
-
 // Theme Colors
 $primary-color: #139149; // logo green
 $primary-dark: #0C6130; // background green
 $primary-light: lighten($primary-color, 10%); 
 
 $secondary-color: #DAA150; // light tan
-$secondary-dark: #9E6F2C; // darker tan
+$secondary-dark: darken($secondary-color, 10%); 
+$secondary-light: light($secondary-color, 10%); 
 
 $accent-color: #AE3127; // reddish
 $accent-color-alt:#139191; // tealish blueish
-$accent-color-alt-dark:#0C4F61; // dark bluish
-
-$title-bar:#333333; // off black
-$border-color:#A3A3A3; // grayish
-$light-gray:#fcfcfc;
-$gray:#eeeeee;
-$dark-gray:#cccccc;
-
 
 // mono
-$white: #FEFEFE;
-$black: #333333;
+$light-gray:#D9D9D9;
+$gray:#cccccc;
+$dark-gray:#4C4C4C;
+
+$white: #ffffff;
+$black: #000000;
 
 // ----------------------------------------
 //		Global 
@@ -67,7 +61,8 @@ $global-radius: 3px; // the roundness of all things (buttons, inputs, panels, bo
 $global-transition: all ease 300ms; // for use with the @include transition(); mixin
 $global-blur: 5px; // for use with the .blur(); mixin
 
-
+$title-bar:$dark-gray; // off black
+$border-color:$gray; // grayish
 
 // ----------------------------------------
 //		Grid 
@@ -130,9 +125,9 @@ $label-font-color: $global-font-color;
 $form-description-color: $global-font-color;
 
 // Placeholder text
-$placeholder-color:darken($border-color, 25%);
-$placeholder-font-size:$base-font-size;
-
+$placeholder-color:lighten($label-font-color, 10%);
+$placeholder-font-size:$label-font-size;
+$placeholder-font-weight:$label-font-weight;
 
 // Inputs
 $input-font-family: $global-font-family;
@@ -170,6 +165,9 @@ $button-font-weight:300;
 $button-radius:$global-radius;
 $button-padding:0.625em 2em;
 
+// Transition / Animation
+$button-transition:$global-transition;
+
 
 // ---------------------------------------------------------
 //      Navigations 
@@ -177,8 +175,8 @@ $button-padding:0.625em 2em;
 
 // color
 $nav-link-color:$white;
-$nav-background-color:$title-bar;
-$nav-background-hover:darken($primary-color, 10%);
+$nav-background-color:$accent-color;
+$nav-background-hover:darken($nav-background-color, 10%);
 
 // font
 $nav-font-family:$global-font-family;

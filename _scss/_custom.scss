@@ -7,89 +7,15 @@ body {
     line-height: $global-line-height;
 }
 
-.lmbr-intro,
-.lmbr-getstarted,
-.lmbr-hero {
-    padding: 2em 0;
+.primary-bg-color{
+    background-color:$primary-color;
 }
 
-.lmbr-hero {
-    background-color: $primary-dark;
-    img {
-        text-align: center;
-        @include center();
-    }
-    p {
-        color: #fff;
-        font-size: 2.375em;
-        text-align: center;
-        font-weight: 100;
-    }
+.secondary-bg-color{
+    background-color:$secondary-color;
 }
 
-.lmbr-nav {
-    background-color: $title-bar;
-    ul {
-        float: right;
-    }
+.accent-bg-color{
+    background-color:$accent-color;
 }
 
-.lmbr-intro {}
-
-a.panel {
-    background-color: $gray;
-    padding: 1em;
-    margin: 1em 0;
-    display: block;
-    h3 {
-        text-align: center;
-    }
-    p {
-        display: none;
-    }
-}
-
-.lmbr-getstarted {}
-
-.blogEntry{
-	@include clearfix();
-}
-
-.blogEntry-excerpt{
-	border-bottom:1px solid $gray;
-	padding-bottom: 1em;
-	margin-bottom:1em;
-	@include clearfix();
-}
-
-.blogCategories{
-}
-
-.btn-cat{
-	@include button(
-		$classname: false,
-		$size: small,
-  		$color: $primary-color,
-  		$type: solid,
-  		$rounded: $button-radius);
-	display:block;	
-}
-
-.blogEntry-title{
-	font-size:1.2em;
-}
-
-.intro{
-    margin-bottom: 2em;
-    @include clearfix();
-}
-
-.componentItem{
-@include clearfix();
-}
-
-footer {
-    background-color: $primary-color;
-    padding: 2em 0;
-    @include clearfix();
-}

@@ -65,6 +65,22 @@ textarea:focus {
 	background-color: $input-focus-background;
 }
 
+::-webkit-input-placeholder, {
+ font-size: $placeholder-font-size;
+ color: $placeholder-color;
+ font-weight: $placeholder-font-weight;
+}
+::-moz-placeholder { /* Firefox 19+ */ 
+ font-size: $placeholder-font-size;
+ color: $placeholder-color; 
+ font-weight: $placeholder-font-weight;
+} 
+:-ms-input-placeholder { 
+ font-size: $placeholder-font-size; 
+ color: $placeholder-color;
+ font-weight: $placeholder-font-weight;
+}
+
 textarea{
 	min-height: 100px;
 	padding-top: 10px;
